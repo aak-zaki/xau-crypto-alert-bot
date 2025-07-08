@@ -23,8 +23,8 @@ def index():
 @app.route("/notify", methods=["POST"])
 def notify():
     data = request.json
-    send_telegram(f"📡 Update dari bot:
-{data.get('message', 'Tidak ada pesan.')}")
+    send_telegram(f"""📡 Update dari bot:
+{data.get('message', 'Tidak ada pesan.')}""")
     return "OK", 200
 
 if __name__ == "__main__":
